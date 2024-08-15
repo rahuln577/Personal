@@ -8,8 +8,38 @@ import Images from './Pages/Images';
 import Projects from './Pages/Projects';
 
 function App() {
-  let flag=true
+  let flag=true,flag1=true
   let tl1 = gsap.timeline({paused:true})
+  let tl2 = gsap.timeline({paused:true})
+  function projectpage()
+  {
+    tl2.to("#herodiv", {
+      opacity: 0,
+      x: 200,
+      duration: 0.7
+    })
+    tl2.to("svg", {
+      scale: 0.5,
+      rotate: 360,
+      delay: -0.6,
+      duration: 0.9
+    })
+  
+    tl2.to("#proj", {
+      scale: 1,
+      borderRadius: 0,
+      duration: 0.5
+    })
+    tl2.to("#proj", {
+      border: "0px",
+      duration: 1
+    })
+    
+    tl2.from("#go",{
+      opacity:0,
+      duration:0.1
+    })
+  }
   function aboutpage()
   {
     tl1.to("#herodiv", {
@@ -89,7 +119,6 @@ function App() {
     
   },[])
   function clickanim() {
-    console.log("hi")
     if(flag){
       console.log(flag)
       flag=false
@@ -101,9 +130,24 @@ function App() {
       tl1.reverse(1.5)
     }
   }
+
+  function projclickanim() {
+    if(flag1){
+  
+      flag1=false
+      tl2.play()
+    }
+    else{
+
+      flag1=true
+      tl2.reverse(1.5)
+    }
+  }
   useGSAP(() => {
     
     aboutpage()
+    projectpage()
+
    
     let tl = gsap.timeline()
     tl.from("#hero1 span", {
@@ -141,8 +185,8 @@ function App() {
     <div className='overflow-hidden w-[100vw] h-[100vh] relative '>
       <Images/>
       <About click={clickanim}/>
-      <Projects/>
-      <Main clickanim={clickanim}/>
+      <Projects click={projclickanim}/>
+      <Main clickanim={clickanim} projclickanim={projclickanim}/>
     </div>
   );
 }

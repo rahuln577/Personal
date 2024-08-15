@@ -7,19 +7,41 @@ import redux from '../Images/redux.png'
 import html from '../Images/html.png'
 import git from '../Images/git.png'
 import tailwind from '../Images/tailwind.png'
+import { useState } from 'react'
 
 let icons=[css,tailwind,js,html,git,react,mongo,redux]
+let projects=[
+    {
+        name:"Real Estate Marketplace",
+        image:require("../Images/realscreen.png"),
+        link:"https://realestatebyrahul.netlify.app",
+        tools:[tailwind,js,html,git,react,mongo,redux]
+    },
+    {
+        name:"Movies Database",
+        image:require("../Images/moviesdb.png"),
+        link:"https://moviesdbbyrahul.netlify.app",
+        tools:[tailwind,js,html,git,react]
+    },
+    {
+        name:"TechTuneMotors",
+        image:require("../Images/techtune.png"),
+        link:"https://techtunemotors.netlify.app",
+        tools:[tailwind,js,html,git,react]
+    }
+]
 
-export default function ProjDisp()
+
+export default function ProjDisp({id})
 {
-    return <div className="absolute z-[100] w-[16rem] sm:w-[30rem] pb-[1rem] bg-gray-900 rounded-2xl right-5 top-[10lvh] overflow-hidden">
-            <video autoPlay="true" loop className='rounded-2xl' muted>
-            <source src={require('../Videos/real.mp4')} type="video/mp4"></source>
-            </video>
-            <p className='text-white m-[1rem] sm:m-[2rem] text-[1.5rem] font-semibold tracking-wider font-fig'>Tools Used:</p>
-            <div className='flex flex-wrap gap-3 justify-center w-[95%] mx-auto'>
+
+    return <div id="disp" className="scale-0 fixed z-[100] w-[16rem] sm:w-[30rem] pb-[1rem] bg-gray-900 rounded-2xl right-5 top-[10lvh] overflow-hidden">
+            <img src={projects[id].image} className='rounded-2xl'></img>
+            
+            
+            <div className='flex flex-wrap gap-3 justify-start w-fit mx-auto mt-3'>
                 
-                {icons.map((value)=><img src={value} className='w-[3rem] h-[3rem]'></img>)}
+                {projects[id].tools.map((value)=><img src={value} className='w-[3rem] h-[3rem]'></img>)}
             </div>
     </div>
 }

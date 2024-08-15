@@ -8,7 +8,9 @@ module.exports = {
       fontFamily:{
         'kalam':["Kalam"],
         'roboto':['Roboto'],
-        'fig':['Figtree']
+        'fig':['Figtree'],
+        'dosis':['Dosis'],
+        'cursive':['Cedarville Cursive']
       },
     },
   },

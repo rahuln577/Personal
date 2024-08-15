@@ -12,7 +12,7 @@ export default function About(props)
       
     </div>
     <div className='absolute bottom-[7vh] flex w-[100%] justify-center'>
-      <button className='text-white  text-[1rem] sm:text-[1.4rem] underline m-0 cursor-pointer' id="gob" onClick={props.click}>Go Back {">"}</button>
+      <button className='text-white  text-[1rem] sm:text-[1.4rem] m-0 cursor-pointer' id="gob" onClick={props.click}>Go Back {">"}</button>
       </div>
 
   </div>
