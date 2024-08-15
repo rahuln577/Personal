@@ -3,9 +3,16 @@ import { useGSAP } from "@gsap/react"
 import gsap from 'gsap'
 import { useState } from "react"
 export default function Projects(props) {
+    let [blur,setblur]=useState([false,false,false])
     let [id, setid] = useState(0)
     function hover(id) {
         setid(id)
+        setblur((prev)=>{
+            return prev.map((value,index)=>{
+                if(id==index)return false
+                return true
+            })
+        })
         gsap.to("#disp", {
             scale: 1,
             duration: 0.5,
@@ -13,6 +20,12 @@ export default function Projects(props) {
         })
     }
     function hover2() {
+        setblur((prev)=>{
+            return prev.map((value,index)=>{
+            return false
+                
+            })
+        })
         gsap.to("#disp", {
             scale: 0,
             duration: 0.5,
@@ -25,15 +38,15 @@ export default function Projects(props) {
 
         <ProjDisp id={id} />
         <div className="w-[90%] mx-auto flex flex-col">
-            <div className="py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full" onMouseOver={() => hover(0)} onMouseLeave={hover2}>
+            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[0]?"blur-sm":""}`} onMouseOver={() => hover(0)} onMouseLeave={hover2}>
                 <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >Real Estate Marketplace</p>
             </div>
 
-            <div className="py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full" onMouseOver={() => hover(1)} onMouseLeave={hover2}>
+            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[1]?"blur-sm":""}`} onMouseOver={() => hover(1)} onMouseLeave={hover2}>
                 <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >Movies Database</p>
             </div>
 
-            <div className="py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full" onMouseOver={() => hover(2)} onMouseLeave={hover2}>
+            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[2]?"blur-sm":""}`} onMouseOver={() => hover(2)} onMouseLeave={hover2}>
                 <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >TechTune Motors</p>
             </div>
 
