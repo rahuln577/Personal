@@ -32,12 +32,12 @@ export default function Projects(props) {
             ease: 'power4.out'
         })
     }
-    return <div id="proj" className="bg-black w-full h-[100dvh] scale-0 absolute z-[99] overflow-y-scroll rounded-[100%]">
+    return <div id="proj" className="bg-black w-full h-[100dvh] scale-0 absolute z-[99] overflow-y-scroll rounded-[100%] flex flex-col justify-center sm:justify-start">
         <div className="scale-1 fixed z-[99] min-h-[18rem] sm:min-h-[23rem] w-[16rem] sm:w-[30rem] pb-[1rem] bg-transparent rounded-2xl right-5 top-[10lvh] overflow-hidden"></div>
 
 
         <ProjDisp id={id} />
-        <div className="w-[90%] mx-auto flex flex-col">
+        <div className="w-[90%] mx-auto flex flex-col justify-center">
             <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[0]?"blur-sm":""}`} onMouseOver={() => hover(0)} onMouseLeave={hover2}>
                 <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >Real Estate Marketplace</p>
             </div>
@@ -52,6 +52,7 @@ export default function Projects(props) {
 
 
         </div>
+        <p className="text-gray-600 mx-[2rem] block sm:hidden">Click on them</p>
         <div className='absolute bottom-[7vh] flex w-[100%] justify-center'>
             <div className='text-white  text-[1rem] sm:text-[1.4rem] m-0 cursor-pointer' id="go" onClick={props.click}>Go Back {">"}</div>
         </div>
