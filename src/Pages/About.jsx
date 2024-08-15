@@ -9,7 +9,7 @@ export default function About(props)
 <li><b>Goal:</b> Create innovative, user-friendly web solutions that have a positive impact 🌟.</li>
 <li><b>Interests:</b> Exploring tech trends 📚 and working on personal projects 🎨.</li>
 <li><b>Let’s Connect: </b>Open to opportunities to collaborate on amazing projects!</li></p>
-      <a href="#" className='text-white text-[1rem] cursor-pointer border-[1px] inline-block p-2 rounded-[5px] hover:bg-white hover:text-black'>RESUME</a>
+      <a href="https://drive.google.com/file/d/1E_MgFZAi40WlL8lrqOfKJ3mypjU-NHhR/view?usp=sharing" className='text-white text-[1rem] cursor-pointer border-[1px] inline-block p-2 rounded-[5px] hover:bg-white hover:text-black'>RESUME</a>
       
     </div>
     <div className='absolute bottom-[7vh] flex w-[100%] justify-center'>
