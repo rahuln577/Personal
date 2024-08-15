@@ -6,16 +6,42 @@ import './App.css';
 import Main from './Pages/Main';
 import Images from './Pages/Images';
 import Projects from './Pages/Projects';
+import Skills from './Pages/Skills';
+import Contacts from './Components/Contacts';
 
 function App() {
-  let flag=true,flag1=true
+  let flag=true,flag1=true,flag2=true,flag3=true
   let tl1 = gsap.timeline({paused:true})
   let tl2 = gsap.timeline({paused:true})
+  let skill=gsap.timeline({paused:true})
+  let contact=gsap.timeline({paused:true})
+
+  function skillpage()
+  {
+    skill.to("#skillbg",{
+      scale:1,
+      duration:0
+    })
+    skill.to("#skillbg",{
+      backdropFilter:"blur(20px)",
+      duration:0.5
+    })
+    skill.to("#skillsec",{
+      y:"0%",
+      duration:0.5
+    })
+    skill.from("#skillsec div",{
+      x:100,
+      opacity:0,
+      stagger:0.05,
+      duration:0.3
+    })
+  }
   function projectpage()
   {
     tl2.to("#herodiv", {
       opacity: 0,
-      x: 200,
+      x: -200,
       duration: 0.7
     })
     tl2.to("svg", {
@@ -143,11 +169,40 @@ function App() {
       tl2.reverse(1.5)
     }
   }
+
+  function skillclickanim() {
+    if(flag2){
+  
+      flag2=false
+      skill.play()
+    }
+    else{
+
+      flag2=true
+      skill.reverse()
+    }
+  }
+
+  function contclickanim() {
+    if(flag3){
+  
+      flag3=false
+      contact.play()
+    }
+    else{
+
+      flag3=true
+      contact.reverse()
+    }
+  }
   useGSAP(() => {
-    
+    skillpage()
     aboutpage()
     projectpage()
-
+    contact.to("#cont",{
+      scale:1,
+      duration:0.5
+    })
    
     let tl = gsap.timeline()
     tl.from("#hero1 span", {
@@ -183,10 +238,14 @@ function App() {
   })
   return (
     <div className='overflow-hidden w-[100vw] h-[100vh] relative '>
+      
       <Images/>
       <About click={clickanim}/>
       <Projects click={projclickanim}/>
-      <Main clickanim={clickanim} projclickanim={projclickanim}/>
+      <Skills click={skillclickanim}/>
+      <Contacts click={contclickanim}/>
+      <Main clickanim={clickanim} projclickanim={projclickanim} skillclickanim={skillclickanim} contclickanim={contclickanim}/>
+      
     </div>
   );
 }
