@@ -56,7 +56,7 @@ export default function Skills(props) {
             {values.map((value)=>{
                 return <div className='w-[3rem] h-[3rem] sm:w-[6rem] sm:h-[6rem] flex m-[1rem] items-center flex-col'>
                 <img src={value.image} className='w-[3rem] h-[3rem] sm:w-[6rem] sm:h-[6rem]'></img>
-                <p className='text-gray-200 text-[0.9rem] sm:text-[1.2rem]'>{value.name}</p>
+                <p className='text-gray-200 text-[0.9rem] sm:text-[1.2rem] font-kalam'>{value.name}</p>
             </div>
             })}
         </div>

@@ -200,9 +200,10 @@ function App() {
     aboutpage()
     projectpage()
     contact.to("#cont",{
-      scale:1,
+      y:"0%",
       duration:0.5
     })
+
    
     let tl = gsap.timeline()
     tl.from("#hero1 span", {

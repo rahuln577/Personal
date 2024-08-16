@@ -38,23 +38,23 @@ export default function Projects(props) {
 
         <ProjDisp id={id} />
         <div className="w-[90%] mx-auto flex flex-col justify-center">
-            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[0]?"blur-sm":""}`} onMouseOver={() => hover(0)} onMouseLeave={hover2}>
-                <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >Real Estate Marketplace</p>
+            <div className={`py-[1.2rem] md:py-[1.5rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[0]?"blur-sm":""}`} onMouseOver={() => hover(0)} onMouseLeave={hover2}>
+                <p className="text-white text-nowrap font-kalam font-light text-[1.7rem] md:text-[3rem]" >Real Estate Marketplace</p>
             </div>
 
-            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[1]?"blur-sm":""}`} onMouseOver={() => hover(1)} onMouseLeave={hover2}>
-                <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >Movies Database</p>
+            <div className={`py-[1.2rem] md:py-[1.5rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[1]?"blur-sm":""}`} onMouseOver={() => hover(1)} onMouseLeave={hover2}>
+                <p className="text-white text-nowrap font-kalam font-light text-[1.7rem] md:text-[3rem]" >Movies Database</p>
             </div>
 
-            <div className={`py-[1.2rem] md:py-[3rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[2]?"blur-sm":""}`} onMouseOver={() => hover(2)} onMouseLeave={hover2}>
-                <p className="text-white text-nowrap font-fig font-light text-[1.7rem] md:text-[3rem]" >TechTune Motors</p>
+            <div className={`py-[1.2rem] md:py-[1.5rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[2]?"blur-sm":""}`} onMouseOver={() => hover(2)} onMouseLeave={hover2}>
+                <p className="text-white text-nowrap font-kalam font-light text-[1.7rem] md:text-[3rem]" >TechTune Motors</p>
             </div>
 
 
         </div>
-        <p className="text-gray-600 mx-[2rem] block sm:hidden">Click on them</p>
+        <p className="text-white text-[0.8rem] mx-[2rem] block sm:hidden">Click on them</p>
         <div className='absolute bottom-[7vh] flex w-[100%] justify-center'>
-            <div className='text-white  text-[1rem] sm:text-[1.4rem] m-0 cursor-pointer' id="go" onClick={props.click}>Go Back {">"}</div>
+            <div className='text-white  text-[1rem] sm:text-[1.4rem] m-0 cursor-pointer font-kalam' id="go" onClick={props.click}>Go Back {">"}</div>
         </div>
     </div>
 }
