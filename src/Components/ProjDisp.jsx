@@ -42,7 +42,7 @@ export default function ProjDisp({id,image})
             
             <div className='flex flex-wrap gap-3 justify-start w-fit mx-auto mt-3'>
                 
-                {projects[id].tools.map((value)=><img src={value} className='w-[3rem] h-[3rem]'></img>)}
+                {projects[id].tools.map((value)=><img src={value} loading="lazy" className='w-[3rem] h-[3rem]'></img>)}
             </div>
     </div>
 }
