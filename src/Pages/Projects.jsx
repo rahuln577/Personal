@@ -36,7 +36,7 @@ export default function Projects(props) {
         <div className="scale-1 fixed z-[99] min-h-[18rem] sm:min-h-[23rem] w-[16rem] sm:w-[30rem] pb-[1rem] bg-transparent rounded-2xl right-5 top-[10lvh] overflow-hidden"></div>
 
 
-        <ProjDisp id={id} />
+        <ProjDisp id={id} image={props.image}/>
         <div className="w-[90%] mx-auto flex flex-col justify-center">
             <div className={`py-[1.2rem] md:py-[1.5rem] px-2 border-b-[0.5px] border-b-gray-800 w-full ${blur[0]?"blur-sm":""}`} onMouseOver={() => hover(0)} onMouseLeave={hover2}>
                 <p className="text-white text-nowrap font-kalam font-light text-[1.7rem] md:text-[3rem]" >Real Estate Marketplace</p>

@@ -8,6 +8,11 @@ import Images from './Pages/Images';
 import Projects from './Pages/Projects';
 import Skills from './Pages/Skills';
 import Contacts from './Components/Contacts';
+import real from './Images/realscreen.png'
+import moviedb from './Images/moviesdb.png'
+import techtune from './Images/techtune.png'
+
+let image=[real,moviedb,techtune]
 
 function App() {
   let flag=true,flag1=true,flag2=true,flag3=true
@@ -242,7 +247,7 @@ function App() {
       
       <Images/>
       <About click={clickanim}/>
-      <Projects click={projclickanim}/>
+      <Projects click={projclickanim} image={image}/>
       <Skills click={skillclickanim}/>
       <Contacts click={contclickanim}/>
       <Main clickanim={clickanim} projclickanim={projclickanim} skillclickanim={skillclickanim} contclickanim={contclickanim}/>

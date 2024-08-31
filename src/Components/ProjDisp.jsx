@@ -9,32 +9,33 @@ import git from '../Images/git.png'
 import tailwind from '../Images/tailwind.png'
 import { useState } from 'react'
 
-let icons=[css,tailwind,js,html,git,react,mongo,redux]
-let projects=[
+
+
+
+export default function ProjDisp({id,image})
+{
+
+    let icons=[css,tailwind,js,html,git,react,mongo,redux]
+    let projects=[
     {
         name:"Real Estate Marketplace",
-        image:require("../Images/realscreen.png"),
+        image:image[0],
         link:"https://realestatebyrahul.netlify.app",
         tools:[tailwind,js,html,git,react,mongo,redux]
     },
     {
         name:"Movies Database",
-        image:require("../Images/moviesdb.png"),
+        image:image[1],
         link:"https://moviesdbbyrahul.netlify.app",
         tools:[tailwind,js,html,git,react]
     },
     {
         name:"TechTuneMotors",
-        image:require("../Images/techtune.png"),
+        image:image[2],
         link:"https://techtunemotors.netlify.app",
         tools:[tailwind,js,html,git,react]
     }
 ]
-
-
-export default function ProjDisp({id})
-{
-
     return <div id="disp" className="scale-0 fixed z-[100] w-[16rem] sm:w-[30rem] pb-[1rem] bg-gray-900 rounded-2xl right-5 top-[10lvh] overflow-hidden">
             <img src={projects[id].image} className='rounded-2xl'></img>
             
