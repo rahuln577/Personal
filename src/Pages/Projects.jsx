@@ -15,7 +15,7 @@ export default function Projects(props) {
         })
         gsap.to("#disp", {
             scale: 1,
-            duration: 0.5,
+            duration: 0.2,
             ease: 'power4.out'
         })
     }
@@ -28,7 +28,7 @@ export default function Projects(props) {
         })
         gsap.to("#disp", {
             scale: 0,
-            duration: 0.5,
+            duration: 0.2,
             ease: 'power4.out'
         })
     }
